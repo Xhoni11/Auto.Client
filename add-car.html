@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shto Makinë — Auto Salloni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">AUTO<span class="brand-accent">SALON</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Kryefaqja</a></li>
+            <li><a href="inventory.html" class="nav-link">Inventori</a></li>
+            <li><a href="add-car.html" class="nav-link active">Shto Makinë</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title">Shto Makinë të Re</h1>
+            <a href="inventory.html" class="btn btn-outline">&larr; Kthehu</a>
+        </div>
+
+        <div class="form-card">
+            <form id="car-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="marka">Marka</label>
+                        <input class="form-input" id="marka" type="text" required placeholder="p.sh. BMW" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="modeli">Modeli</label>
+                        <input class="form-input" id="modeli" type="text" required placeholder="p.sh. M5" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="viti">Viti</label>
+                        <input class="form-input" id="viti" type="number" min="1950" max="2030" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cmimi">Çmimi (€)</label>
+                        <input class="form-input" id="cmimi" type="number" min="0" step="100" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="ngjyra">Ngjyra</label>
+                        <input class="form-input" id="ngjyra" type="text" required placeholder="p.sh. E zezë" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="kilometra">Kilometrat</label>
+                        <input class="form-input" id="kilometra" type="number" min="0" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="karburanti">Karburanti</label>
+                        <select class="form-select" id="karburanti" required>
+                            <option value="Benzinë">Benzinë</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Elektrik">Elektrik</option>
+                            <option value="Hibrid">Hibrid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="transmisioni">Transmisioni</label>
+                        <select class="form-select" id="transmisioni" required>
+                            <option value="Automatik">Automatik</option>
+                            <option value="Manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label class="form-label" for="imazhUrl">URL e Imazhit (opsionale)</label>
+                        <input class="form-input" id="imazhUrl" type="url" placeholder="https://..." />
+                    </div>
+                    <div class="form-group full">
+                        <label class="form-check">
+                            <input type="checkbox" id="neShitje" checked />
+                            <span>E disponueshme për shitje</span>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <a href="inventory.html" class="btn btn-outline">Anulo</a>
+                        <button type="submit" class="btn btn-gold">Shto Makinën</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/store-http.js"></script>
+    <script src="scripts/add-car.js"></script>
+</body>
+</html>

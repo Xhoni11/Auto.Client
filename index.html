@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Salloni — Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">AUTO<span class="brand-accent">SALON</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Kryefaqja</a></li>
+            <li><a href="inventory.html" class="nav-link">Inventori</a></li>
+            <li><a href="add-car.html" class="nav-link">Shto Makinë</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Mirë se vini në Auto Salon</h1>
+            <p>Menaxho inventorin e makinave tuaja luksoze me lehtësi dhe stil profesional.</p>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Totali i Makinave</div>
+                <div class="stat-value" id="stat-total">–</div>
+                <div class="stat-sub">në inventor</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Në Shitje</div>
+                <div class="stat-value" id="stat-available">–</div>
+                <div class="stat-sub">të disponueshme</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Vlera Totale</div>
+                <div class="stat-value" id="stat-value">–</div>
+                <div class="stat-sub">inventori</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Çmimi Mesatar</div>
+                <div class="stat-value" id="stat-avg">–</div>
+                <div class="stat-sub">për makinë</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">Menyja Kryesore</h2>
+        </div>
+
+        <div class="menu-grid">
+            <a href="inventory.html" class="menu-card">
+                <div class="menu-icon">🚗</div>
+                <h3 class="menu-title">Shiko Inventorin</h3>
+                <p class="menu-desc">Shfleto të gjitha makinat e disponueshme në sallon.</p>
+            </a>
+            <a href="add-car.html" class="menu-card">
+                <div class="menu-icon">➕</div>
+                <h3 class="menu-title">Shto Makinë</h3>
+                <p class="menu-desc">Regjistro një makinë të re në inventorin tuaj.</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="scripts/store-http.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>
