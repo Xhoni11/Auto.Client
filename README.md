@@ -35,18 +35,6 @@ Auto.Client/
     └── main.css        # Dizajni i errët me theks të artë
 ```
 
-## Si ta ekzekutosh
-
-**1. Sigurohu që backend-i është aktiv** ([Auto.API](https://github.com/Xhoni11/Auto.API)):
-```bash
-cd Auto.API
-dotnet run
-```
-
-**2. Hap frontend-in me një server lokal:**
-```bash
-npx serve .
-```
 
 Pastaj hap browser-in në URL-në që të jep `npx serve` (zakonisht `http://localhost:3000`).
 
